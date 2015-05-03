@@ -11,9 +11,9 @@ def MarkGraph(LocalMaxs, LocalMins, ax):
         ax.annotate('Down',xy=(tup[0],tup[1]),xytext=(tup[0],tup[1]-0.005),arrowprops=dict(facecolor='black', shrink=0.05));
     return ax;
 
-def MarkPattern(HS,ax):
-    for tup in HS:
-        ax.annotate('HS',xy=(tup[0],tup[1]),xytext=(tup[0]+2,tup[1]+0.001),arrowprops=dict(facecolor='black', shrink=0.05));
+def MarkPattern(pairs,name,ax):
+    for tup in pairs:
+        ax.annotate(name,xy=(tup[0],tup[1]),xytext=(tup[0],tup[1]-0.005),arrowprops=dict(facecolor='black', shrink=0.05));
     return ax;
 
 

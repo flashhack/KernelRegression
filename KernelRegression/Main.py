@@ -28,6 +28,7 @@ def OnePlot(num):
 def RegimePlot(num):
     TrendUp = readfile.ReadPair('TrendUp.txt');
     TrendDown = readfile.ReadPair('TrendDown.txt');
+    Range = readfile.ReadPair('Range.txt');
     quotes = readfile.ReadDataPrice('DataPrice.txt');
     title_time = readfile.ReadTime('TrendUp.txt');
     
@@ -37,6 +38,7 @@ def RegimePlot(num):
     
     plotgraph.PlotGraph_Candle(ax,quotes);
     plotgraph.MarkGraph(TrendUp,TrendDown,ax);
+    #plotgraph.MarkPattern(Range,'R',ax);
 
     plt.grid(True);
     plt.title(title_time);
